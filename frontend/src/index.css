@@ -1,0 +1,358 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 320px;
+  min-height: 100%;
+  background: #080b12;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(99, 102, 241, 0.10),
+      transparent 32%
+    ),
+    radial-gradient(
+      circle at bottom right,
+      rgba(139, 92, 246, 0.08),
+      transparent 30%
+    ),
+    #080b12;
+
+  color: #f9fafb;
+
+  font-family:
+    Inter,
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* =========================
+   VaultNote Buttons
+   ========================= */
+
+.vault-button {
+  border: 0;
+  border-radius: 9px;
+
+  padding: 10px 16px;
+
+  background: #6366f1;
+  color: #ffffff;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  transition:
+    background 0.15s ease,
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.vault-button:hover {
+  background: #5558e8;
+
+  transform: translateY(-1px);
+
+  box-shadow:
+    0 8px 24px
+    rgba(99, 102, 241, 0.20);
+}
+
+.vault-button:active {
+  transform: translateY(0);
+}
+
+.vault-button-secondary {
+  border: 1px solid #30384a;
+  border-radius: 9px;
+
+  padding: 10px 16px;
+
+  background: #111722;
+  color: #d1d5db;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  transition:
+    background 0.15s ease,
+    border-color 0.15s ease;
+}
+
+.vault-button-secondary:hover {
+  background: #171e2c;
+  border-color: #4b5563;
+}
+
+.vault-button-danger {
+  border: 1px solid
+    rgba(239, 68, 68, 0.35);
+
+  border-radius: 9px;
+
+  padding: 10px 16px;
+
+  background:
+    rgba(127, 29, 29, 0.20);
+
+  color: #fca5a5;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  transition:
+    background 0.15s ease,
+    border-color 0.15s ease;
+}
+
+.vault-button-danger:hover {
+  background:
+    rgba(127, 29, 29, 0.35);
+
+  border-color:
+    rgba(239, 68, 68, 0.55);
+}
+
+/* =========================
+   Cards
+   ========================= */
+
+.vault-card {
+  background:
+    rgba(15, 21, 34, 0.92);
+
+  border: 1px solid #252d3d;
+
+  border-radius: 14px;
+
+  box-shadow:
+    0 12px 40px
+    rgba(0, 0, 0, 0.22);
+}
+
+.vault-card:hover {
+  border-color: #343e54;
+}
+
+/* =========================
+   Inputs
+   ========================= */
+
+.vault-input,
+.vault-textarea {
+  width: 100%;
+
+  border: 1px solid #30384a;
+  border-radius: 9px;
+
+  outline: none;
+
+  background: #0b101a;
+  color: #f9fafb;
+
+  transition:
+    border-color 0.15s ease,
+    box-shadow 0.15s ease,
+    background 0.15s ease;
+}
+
+.vault-input {
+  min-height: 42px;
+  padding: 10px 12px;
+}
+
+.vault-textarea {
+  padding: 12px;
+
+  resize: vertical;
+}
+
+.vault-input::placeholder,
+.vault-textarea::placeholder {
+  color: #586174;
+}
+
+.vault-input:focus,
+.vault-textarea:focus {
+  border-color: #6366f1;
+
+  background: #0d1320;
+
+  box-shadow:
+    0 0 0 3px
+    rgba(99, 102, 241, 0.12);
+}
+
+.vault-input:disabled,
+.vault-textarea:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+/* =========================
+   Error
+   ========================= */
+
+.vault-error {
+  padding: 11px 13px;
+
+  border: 1px solid
+    rgba(239, 68, 68, 0.25);
+
+  border-radius: 9px;
+
+  background:
+    rgba(127, 29, 29, 0.15);
+
+  color: #fca5a5;
+
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+/* =========================
+   Success
+   ========================= */
+
+.vault-success {
+  padding: 11px 13px;
+
+  border: 1px solid
+    rgba(34, 197, 94, 0.25);
+
+  border-radius: 9px;
+
+  background:
+    rgba(20, 83, 45, 0.15);
+
+  color: #86efac;
+
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+/* =========================
+   Scrollbar
+   ========================= */
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #080b12;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #30384a;
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #46516a;
+}
+
+/* =========================
+   Selection
+   ========================= */
+
+::selection {
+  background: rgba(99, 102, 241, 0.35);
+  color: #ffffff;
+}
+
+/* =========================
+   Focus
+   ========================= */
+
+:focus-visible {
+  outline: 2px solid #818cf8;
+  outline-offset: 2px;
+}
+
+/* =========================
+   Layout Helpers
+   ========================= */
+
+.vault-page {
+  min-height: 100vh;
+  width: 100%;
+}
+
+.vault-container {
+  width: 100%;
+  max-width: 1200px;
+
+  margin: 0 auto;
+
+  padding:
+    24px;
+}
+
+/* =========================
+   Responsive
+   ========================= */
+
+@media (max-width: 768px) {
+  .vault-container {
+    padding: 16px;
+  }
+
+  .vault-card {
+    border-radius: 11px;
+  }
+}
+
+@media (max-width: 480px) {
+  .vault-container {
+    padding: 12px;
+  }
+
+  .vault-button,
+  .vault-button-secondary,
+  .vault-button-danger {
+    padding: 9px 13px;
+  }
+}
